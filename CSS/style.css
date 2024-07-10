@@ -1,0 +1,256 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+
+    color: white;
+}
+
+li {
+    list-style-type: none;
+}
+
+section {
+    padding-bottom: 80px;
+}
+
+/* Start Home section  */
+.home-list {
+    width: 0;
+    height: 100vh;
+    background-color: black;
+    position: fixed;
+    z-index: 1;
+    overflow: hidden;
+
+}
+
+.home-list .btn-close {
+    background-color: white;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+
+}
+
+.home-list ul {
+    padding-top: 50px;
+
+}
+
+.home-list ul li {
+    padding-top: 40px;
+
+}
+
+.home-list ul li a {
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 38px;
+    transition: all 0.5s ease;
+}
+
+.home-list ul li a:hover {
+    color: rgba(214, 46, 51, 0.4)
+}
+
+.home-content {
+    width: 100%;
+    height: 100vh;
+    background:
+        linear-gradient(rgba(219, 39, 39, 0.5), rgba(214, 32, 32, 0.5)),
+        /* Overlay */
+        url(../Images/events-heavenly-header.jpg) no-repeat center center/cover;
+    /* Background image */
+}
+
+.home-content h2 {
+    font-size: 60px;
+    font-weight: 500;
+    line-height: 72px;
+    color: white;
+    text-align: center;
+    padding-top: 180px;
+}
+
+.home-content p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    color: white;
+    text-align: center;
+}
+
+.home-content span {
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 45px;
+    color: white;
+    padding-left: 15px;
+    cursor: pointer;
+}
+
+/* End Home section  */
+/* Start Duration section */
+.duration-container {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+
+}
+
+.duration-container h4 {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 34px;
+    color: white;
+    background-color: rgb(230, 130, 133);
+    padding: 10px;
+    margin: 0px;
+    cursor: pointer;
+}
+
+.singer-text {
+    background-color: rgb(204, 204, 204);
+    display: none;
+}
+
+.singer-text p {
+    padding: 10px;
+    margin: 0;
+}
+
+/* End Duration section */
+/* Start Details section */
+#Details {
+    background:
+        linear-gradient(rgba(219, 39, 39, 0.5), rgba(214, 32, 32, 0.5)),
+        /* Overlay */
+        url(../Images/invitation-2508607__340.jpg) no-repeat center center/cover;
+    /* Background image */
+}
+
+.counter {
+    border: 1px solid white;
+    margin-top: 50px;
+    padding: 50px;
+}
+
+.counter span {
+    color: white;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 45px;
+}
+
+/* End Details section */
+/* Start Contact section */
+#Contact h5 {
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 42px;
+    color: #444444;
+}
+
+
+
+.contact-info h6 {
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 22px;
+    color: #444444;
+}
+
+.wrapper {
+    display: inline-flex;
+    list-style: none;
+}
+
+.wrapper .icon {
+    position: relative;
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #ffffff;
+    color: #ffffff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #ffffff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+    background: #1877F2;
+    color: #ffffff;
+}
+
+.wrapper .tiktok:hover,
+.wrapper .tiktok:hover .tooltip,
+.wrapper .tiktok:hover .tooltip::before {
+    background: #000000;
+    color: #ffffff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+    background: #7a21b6;
+    color: #ffffff;
+}
+
+.wrapper .youtube:hover,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before {
+    background: #CD201F;
+    color: #ffffff;
+}
+
+/* End Contact section */
